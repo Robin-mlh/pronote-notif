@@ -14,9 +14,10 @@ Python 3 est requis, ainsi que l'API pronotepy:
 
     pip3 install https://github.com/bain3/pronotepy/archive/refs/heads/master.zip
 
-
+###
 Tout d'abord, __vous devez définir vos paramètres (identifiants, mail, etc) dans le fichier de configuration__ ```pronote-notif.conf```.
-Pour modifier plus de chose, éditez directement le fichier ```pronote-notif.py```. Vous pouvez par exemple désactiver les notifications pour un certain type d'activité (ligne 200).
+Vous devrez configurer un compte mail avec accès smtp pour envoyer les notifications. [Voilà comment faire avec Gmail.](https://support.google.com/mail/answer/7126229?hl=fr#zippy=%2C%C3%A9tape-modifier-les-param%C3%A8tres-smtp-et-les-autres-param%C3%A8tres-dans-votre-client-de-messagerie)
+Vous pouvez aussi modifier plus de chose directement dans le fichier ```pronote-notif.py```. Par exemple, désactiver les notifications pour un certain type d'activité (ligne 200).
 
 
 Lancez le script après lui avoir donné la permission nécessaire:
@@ -27,8 +28,8 @@ Lancez le script après lui avoir donné la permission nécessaire:
 Pour exécuter le script toutes les 30 minutes par exemple, sur Ubuntu le plus simple est d'utiliser cron:
     
     crontab -e
-    
-Ajoutez cette ligne:  (remplacez pronote-notif.py par le bon chemin)
+
+Ajoutez cette ligne, en remplaçant ```pronote-notif.py``` par le bon chemin:
     
     */30 * * * * ./pronote-notif.py
     
