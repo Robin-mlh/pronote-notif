@@ -18,7 +18,7 @@ LOG_FICHIER = "pronote-notif.log"
 LOG_FORMAT = '%(asctime)s  %(levelname)s %(message)s'
 CONF_FICHIER = "pronote-notif.conf"
 DB_FICHIER = "db-pronote-notif.pickle"
-DOSSIER = os.getcwd()
+DOSSIER = os.path.realpath(__file__)[:-16]
 os.chdir(DOSSIER)
 
 
@@ -167,7 +167,7 @@ if __name__ == '__main__':
     logging.basicConfig(format=LOG_FORMAT, level=logging.INFO,
                         handlers=[logging.FileHandler(LOG_FICHIER), logging.StreamHandler()])
     # Chargement du fichier de configuration.
-    logging.info("Lancement du script.")
+    logging.info("------ Lancement du script ------")
     try:
         config = configparser.ConfigParser()
         config.read(CONF_FICHIER)
