@@ -22,7 +22,7 @@ Vous pouvez aussi modifier plus de chose directement dans le fichier ```pronote-
 
 Lancez le script après lui avoir donné la permission nécessaire:
 
-    sudo chmod +x tkp.py
+    sudo chmod +x pronote-notif.py
     ./tkp.py
 
 Pour exécuter le script toutes les 30 minutes par exemple, sur Ubuntu le plus simple est d'utiliser cron:
